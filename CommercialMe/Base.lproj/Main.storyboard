@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-u9-8d7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lr0-u9-8d7">
                                 <rect key="frame" x="69" y="101" width="462" height="459"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,11 +47,17 @@
                                 <rect key="frame" x="541" y="285" width="32" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tkD-Di-xaZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUu-kj-occ">
                                 <rect key="frame" x="20" y="285" width="39" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lVp-8e-4St"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -84,6 +90,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="textWindow" destination="lr0-u9-8d7" id="eaa-rN-IXk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

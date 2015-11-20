@@ -7,16 +7,45 @@
 //
 
 #import "ViewController.h"
+#import "Story.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    Story *myStory;
+}
 
 @end
 
 @implementation ViewController
 
+- (IBAction)nextPressed:(id)sender {
+    [myStory next];
+    [self updateView];
+}
+
+- (IBAction)backPressed:(id)sender {
+    [myStory back];
+    [self updateView];
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //make the story object
+    myStory = [[Story alloc] init];
+    
+    [self updateView];
+    
+    
+    
+}
+
+-(void) updateView {
+    
+    //set the window text to the story text
+    self.textWindow.text = myStory.text;
+    
 }
 
 - (void)didReceiveMemoryWarning {

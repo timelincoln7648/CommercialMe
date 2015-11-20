@@ -15,6 +15,7 @@
 		2BF15EEB1BFFB1DF00A316BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF15EE91BFFB1DF00A316BE /* LaunchScreen.storyboard */; };
 		2BF15EF61BFFB1DF00A316BE /* CommercialMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15EF51BFFB1DF00A316BE /* CommercialMeTests.m */; };
 		2BF15F011BFFB1DF00A316BE /* CommercialMeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F001BFFB1DF00A316BE /* CommercialMeUITests.m */; };
+		2BF15F101BFFB73500A316BE /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF15F0F1BFFB73500A316BE /* Story.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		2BF15EFC1BFFB1DF00A316BE /* CommercialMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommercialMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BF15F001BFFB1DF00A316BE /* CommercialMeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommercialMeUITests.m; sourceTree = "<group>"; };
 		2BF15F021BFFB1DF00A316BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BF15F0E1BFFB73500A316BE /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		2BF15F0F1BFFB73500A316BE /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				2BF15EE11BFFB1DF00A316BE /* ViewController.h */,
 				2BF15EE21BFFB1DF00A316BE /* ViewController.m */,
 				2BF15EE41BFFB1DF00A316BE /* Main.storyboard */,
+				2BF15F0E1BFFB73500A316BE /* Story.h */,
+				2BF15F0F1BFFB73500A316BE /* Story.m */,
 				2BF15EE71BFFB1DF00A316BE /* Assets.xcassets */,
 				2BF15EE91BFFB1DF00A316BE /* LaunchScreen.storyboard */,
 				2BF15EEC1BFFB1DF00A316BE /* Info.plist */,
@@ -273,6 +278,7 @@
 				2BF15EE31BFFB1DF00A316BE /* ViewController.m in Sources */,
 				2BF15EE01BFFB1DF00A316BE /* AppDelegate.m in Sources */,
 				2BF15EDD1BFFB1DF00A316BE /* main.m in Sources */,
+				2BF15F101BFFB73500A316BE /* Story.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +504,7 @@
 				2BF15F071BFFB1DF00A316BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BF15F081BFFB1DF00A316BE /* Build configuration list for PBXNativeTarget "CommercialMeTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +513,7 @@
 				2BF15F0A1BFFB1DF00A316BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BF15F0B1BFFB1DF00A316BE /* Build configuration list for PBXNativeTarget "CommercialMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +522,7 @@
 				2BF15F0D1BFFB1DF00A316BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
