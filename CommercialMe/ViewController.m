@@ -17,20 +17,53 @@
 
 @implementation ViewController
 
+
+- (IBAction)scrollDownPressed:(id)sender {
+    NSLog(@"Scroll down pressed! ;)");
+}
+
 - (IBAction)nextPressed:(id)sender {
-    [myStory next];
+    if ([self canMoveUp]) {
+        self.pageNumber++;
+        NSLog(@"changed page number to %d", self.pageNumber);
+    }
     [self updateView];
 }
 
 - (IBAction)backPressed:(id)sender {
-    [myStory back];
+    if ([self canMoveDown]) {
+        self.pageNumber--;
+        NSLog(@"changed page number to %d", self.pageNumber);
+    }
     [self updateView];
+}
+
+
+-(BOOL) canMoveUp {
+    int attemptedPage = self.pageNumber +1;
+    if (attemptedPage >= myStory.textArray.count) {
+        NSLog(@"attemped page out of range");
+        return false;
+    }
+    return true;
+}
+
+-(BOOL) canMoveDown {
+    int attemptedPage = self.pageNumber -1;
+    if (attemptedPage < 0) {
+        NSLog(@"attemped page out of range");
+        return false;
+    }
+    
+    return true;
 }
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.pageNumber = 0;
     
     //make the story object
     myStory = [[Story alloc] init];
@@ -42,15 +75,11 @@
 }
 
 -(void) updateView {
-    
-    //set the window text to the story text
-    self.textWindow.text = myStory.text;
-    
+    self.textWindow.text = [myStory.textArray objectAtIndex:self.pageNumber];
+    NSLog(@"Updated text to array from page number %d", self.pageNumber);
+    //NSLog(@"updated text to %@", [myStory.textArray objectAtIndex:self.pageNumber]);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

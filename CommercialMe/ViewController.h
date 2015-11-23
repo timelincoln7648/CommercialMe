@@ -12,5 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *textWindow;
 
+@property int pageNumber;
+
 @end
 

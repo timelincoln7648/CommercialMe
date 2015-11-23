@@ -11,12 +11,11 @@
 @interface Story : NSObject
 
 @property (copy) NSString *text;
-@property (copy) NSMutableArray *textArray;
+@property (copy) NSArray *textArray;
 @property (copy) NSString *wholeStory;
 
 
 -(void) setStoryText;
--(void) next;
--(void) back;
+
 
 @end
