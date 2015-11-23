@@ -20,6 +20,7 @@
 
 - (IBAction)scrollDownPressed:(id)sender {
     NSLog(@"Scroll down pressed! ;)");
+    [self scrollToBottom:self.textWindow];
 }
 
 - (IBAction)nextPressed:(id)sender {
@@ -70,14 +71,28 @@
     
     [self updateView];
     
+    [self.textWindow setContentOffset:CGPointZero animated:YES];
     
-    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self.textWindow setContentOffset:CGPointZero animated:YES];
 }
 
 -(void) updateView {
     self.textWindow.text = [myStory.textArray objectAtIndex:self.pageNumber];
     NSLog(@"Updated text to array from page number %d", self.pageNumber);
-    //NSLog(@"updated text to %@", [myStory.textArray objectAtIndex:self.pageNumber]);
+    [self viewDidAppear:true];
+}
+
+
+
+//HELPER METHODS
+
+-(void) scrollToBottom: (UITextView*)textView {
+    [textView scrollRangeToVisible:NSMakeRange([textView.text length], 0)];
+    [textView setScrollEnabled:NO];
+    [textView setScrollEnabled:YES];
 }
 
 
